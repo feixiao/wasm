@@ -96,6 +96,9 @@ emcc -o hello.html hello.c -O3 -s WASM=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['cc
         </script>
 ```
 
+#### 完整例子
++   [基于WASM的H265 Web播放器](https://github.com/sonysuqin/WasmVideoPlayer)
+
 #### 参考资料
 + [webassembly](https://webassembly.org/)
 + [webassembly firefox](https://developer.mozilla.org/zh-CN/docs/WebAssembly)
