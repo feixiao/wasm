@@ -19,9 +19,17 @@ mkdir hello
 int main(int argc, char ** argv) { 
     printf("Hello, world!\n");
 }
+
+
+emcc hello.c -s WASM=1 -o hello.html
+
+emrun --no_browser --port 8080 .
+
+# 浏览访问localhost:8080
 ```
 
 
 #### 参考资料
++ [webassembly](https://webassembly.org/)
 + [webassembly firefox](https://developer.mozilla.org/zh-CN/docs/WebAssembly)
 + [emscripten](https://emscripten.org/)
