@@ -1,6 +1,7 @@
 ## WebAssembly 快速入门
 
 #### 编译 Emscripten
++ OSX or Ubuntu
 ```shell
 git clone https://github.com/emscripten-core/emsdk.git
 cd emsdk
@@ -8,6 +9,16 @@ cd emsdk
 ./emsdk activate latest
 
 source ./emsdk_env.sh
+```
++ Windows10
+```shell
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+.\emsdk.bat install latest
+.\emsdk.bat activate latest
+.\emsdk_env.bat
+# 添加相应的路径和环境变量
+
 ```
 #### 编译并运行一个简单的程序
 ```shell
