@@ -23,6 +23,7 @@ cd emsdk
 #### [1: 编译并运行一个简单的程序](./hello/ReadMe.md)
 #### [2: 使用自定义HTML模板](./html_template/ReadMe.md)
 #### [3: 调用一个定义在C中的自定义方法](./call/ReadMe.md)
+#### [4: 加载和运行WebAssembly代码](./load/ReadMe.md)
 
 ##### 完整例子
 +   [基于WASM的H265 Web播放器](https://github.com/sonysuqin/WasmVideoPlayer)
