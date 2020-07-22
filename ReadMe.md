@@ -1,7 +1,7 @@
 ## WebAssembly 快速入门
 
 
-### 推荐优先的资料[cppwasm-book](https://github.com/3dgen/cppwasm-book)
+### 推荐优秀的资料[cppwasm-book](https://github.com/3dgen/cppwasm-book)
 
 #### 编译 Emscripten
 + OSX or Ubuntu
