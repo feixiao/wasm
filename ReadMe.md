@@ -6,12 +6,15 @@
 #### 编译 Emscripten
 + OSX or Ubuntu
 ```shell
-git clone https://github.com/emscripten-core/emsdk.git
+wget https://codeload.github.com/emscripten-core/emsdk/zip/refs/tags/4.0.4
 cd emsdk
 ./emsdk install latest
 ./emsdk activate latest
 
 source ./emsdk_env.sh
+source "/Users/frank/wk/forbuild/emsdk-4.0.4/emsdk_env.sh"
+
+#echo 'source "/Users/frank/wk/forbuild/emsdk-4.0.4/emsdk_env.sh"' >> $HOME/.zprofile
 ```
 + Windows10
 ```shell
