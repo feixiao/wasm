@@ -39,3 +39,4 @@ cd emsdk
 + [webassembly firefox](https://developer.mozilla.org/zh-CN/docs/WebAssembly)
 + [emscripten](https://emscripten.org/)
 + [webassembly-examples](https://github.com/mdn/webassembly-examples)
++ [《从C++编译WebAssembly的实用指南》](https://www.yuque.com/metroluffy/fe-notes/compiling-from-c-to-webassembly-a-guide)
