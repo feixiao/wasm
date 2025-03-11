@@ -24,3 +24,15 @@ else()
 	set(CMAKE_EXECUTABLE_SUFFIX ".wasm.js")
 	set_target_properties(hello PROPERTIES LINK_FLAGS "-s WASM=1 -s EXPORTED_FUNCTIONS='[_new_fib,_next_val]'")
 endif()
+
+# 怎么生成测试web 
+# 让 Emscripten 生成 HTML
+set_target_properties(hello PROPERTIES
+    OUTPUT_NAME "wasm_project"
+    SUFFIX ".html"  # 让 Emscripten 直接生成 HTML
+)
+
+# 传递 Emscripten 编译参数
+target_compile_options(hello PRIVATE 
+    "-o wasm_project.html"  # 直接生成 HTML
+)
