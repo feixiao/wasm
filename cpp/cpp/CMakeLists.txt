@@ -1,27 +1,26 @@
-set(project "hello")
+project (client)
+cmake_minimum_required(VERSION 3.5.1)
+option(JS_ONLY "Compiles to native JS (No WASM)" ON)
 
-project(${project})
-cmake_minimum_required(VERSION 3.12)
+add_definitions(-std=c++11 -O3)
+include_directories(include)
 
-set(src 
-	  hello.cpp
-	  fib.cpp
-	)
+file(GLOB SOURCES *.cpp)
 
 set(exports 
 	  _new_fib 
 	  _next_val
 	)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/public")
+add_executable(a ${SOURCES})
 
-# process exported functions
-set(exports_string "")
-list(JOIN exports "," exports_string)
-
-# set compiler and flags
-SET(CMAKE_C_COMPILER emcc)
-SET(CMAKE_CPP_COMPILER em++)
-set( CMAKE_CXX_FLAGS "-s EXPORTED_FUNCTIONS=\"[${exports_string}]\""  )
-
-# specify the project
-add_executable(${project}.html ${src})
+if(JS_ONLY)
+	message(STATUS "Setting compilation target to native JavaScript")
+	set(CMAKE_EXECUTABLE_SUFFIX ".js")
+	set_target_properties(a PROPERTIES LINK_FLAGS "-s WASM=0 -s EXPORTED_FUNCTIONS='[_new_fib,_next_val]'")
+else(JS_ONLY)
+	message(STATUS "Setting compilation target to WASM")
+	set(CMAKE_EXECUTABLE_SUFFIX ".wasm.js")
+	set_target_properties(a PROPERTIES LINK_FLAGS "-s WASM=1 -s EXPORTED_FUNCTIONS='[_new_fib,_next_val]'")
+endif(JS_ONLY)
