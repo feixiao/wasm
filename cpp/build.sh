@@ -6,13 +6,11 @@ CMAKE_TOOLCHAIN_FILE=/home/user/emsdk/upstream/emscripten/cmake/Modules/Platform
 rm build/ -rf
 mkdir build
 cd build 
-emcmake cmake ../cpp
+emcmake cmake ../cpp -DJS_ONLY=ON
 make
-mv ../cpp/public/hello.js ../web/gen/hello.js
+cp -rf  ../cpp/public/hello.js ../web/gen/hello.js
 
-
-# make
-emcmake cmake ../cpp -DJS_ONLY=ON  
+emcmake cmake ../cpp -DJS_ONLY=OFF
 make 
-mv ../cpp/public/hello.wasm.js ../web/gen/hello.wasm.js
-mv ../cpp/public/hello.wasm.wasm ../web/gen/hello.wasm.wasm
+cp -rf  ../cpp/public/hello.wasm.js ../web/gen/hello.wasm.js
+cp -rf  ../cpp/public/hello.wasm.wasm ../web/gen/hello.wasm.wasm

@@ -8,7 +8,7 @@ export CMAKE_TOOLCHAIN_FILE=/home/user/emsdk/upstream/emscripten/cmake/Modules/P
 ##### Compile to WASM (default)
 ```shell
 cd build  
-emcmake cmake ../cpp
+emcmake cmake ../cpp -DJS_ONLY=OFF
 make
 ```
 
