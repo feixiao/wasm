@@ -6,7 +6,7 @@
 #### 编译 Emscripten
 + OSX or Ubuntu
 ```shell
-wget https://codeload.github.com/emscripten-core/emsdk/zip/refs/tags/4.0.4
+wget https://codeload.github.com/emscripten-core/emsdk/zip/refs/tags/4.0.4 -o emsdk-4.0.4.zip
 cd emsdk
 ./emsdk install latest
 ./emsdk activate latest
@@ -30,7 +30,7 @@ cd emsdk
 #### [2: 使用自定义HTML模板](./html_template/ReadMe.md)
 #### [3: 调用一个定义在C中的自定义方法](./call/ReadMe.md)
 #### [4: 加载和运行WebAssembly代码](./load/ReadMe.md)
-
+#### [5: 从C++编译WebAssembly的实用指南]()
 ##### 完整例子
 +   [基于WASM的H265 Web播放器](https://github.com/sonysuqin/WasmVideoPlayer)
 
@@ -40,3 +40,4 @@ cd emsdk
 + [emscripten](https://emscripten.org/)
 + [webassembly-examples](https://github.com/mdn/webassembly-examples)
 + [《从C++编译WebAssembly的实用指南》](https://www.yuque.com/metroluffy/fe-notes/compiling-from-c-to-webassembly-a-guide)
++ [modern-wasm-starter](https://github.com/TheLartians/modern-wasm-starter/tree/master)
